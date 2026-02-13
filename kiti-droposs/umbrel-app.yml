@@ -1,0 +1,30 @@
+manifestVersion: 1
+id: kiti-droposs
+name: Drop
+tagline: An open Steam.
+icon: https://svgur.com/i/mvA.svg
+category: Development
+version: "1.0.0"
+port: 4000
+description: >-
+Drop is an open-source, self-hosted alternative to platforms like Steam and Epic.
+developer: DropOss
+website: https://github.com/Drop-OSS/drop
+submitter: Rfonte
+submission: https://github.com/kiti-sites/umbrel-community-app-store/kiti-droposs
+repo: https://github.com/Drop-OSS/drop
+support: https://github.com/Drop-OSS/drop/issues
+gallery:
+  - https://droposs.org/gallery/store.png
+  - https://droposs.org/gallery/storepage.png
+  - https://droposs.org/gallery/devices.png
+releaseNotes: >-v0.3.5
+Add metadata timeout by @DecDuck in #287
+Fix 7z archives with spaces by @DecDuck in #288
+Steam mature content screenshots by @Hicks-99 in #284
+Internal server error fixes, 7z fixes, etc by @DecDuck in #289
+Translations update from Weblate by @DecDuck in #290
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
