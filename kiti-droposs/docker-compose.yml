@@ -21,8 +21,8 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./library:/library
-      - ./data:/data
+      - ./library
+      - ./data
     environment:
       - DATABASE_URL=postgres://drop:drop@postgres:5432/drop
       - EXTERNAL_URL=http://umbrel.localdomain:3000
