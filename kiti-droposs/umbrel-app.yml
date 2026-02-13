@@ -7,7 +7,7 @@ category: Games
 version: "0.3.5"
 port: 3000
 description: >-
-Drop is an open-source, self-hosted alternative to platforms like Steam and Epic.
+  Drop is an open-source, self-hosted alternative to platforms like Steam and Epic.
 developer: DropOss
 website: https://github.com/Drop-OSS/drop
 submitter: Rfonte
@@ -18,12 +18,13 @@ gallery:
   - https://droposs.org/gallery/store.png
   - https://droposs.org/gallery/storepage.png
   - https://droposs.org/gallery/devices.png
-releaseNotes: >-v0.3.5
-Add metadata timeout by @DecDuck in #287
-Fix 7z archives with spaces by @DecDuck in #288
-Steam mature content screenshots by @Hicks-99 in #284
-Internal server error fixes, 7z fixes, etc by @DecDuck in #289
-Translations update from Weblate by @DecDuck in #290
+releaseNotes: |-
+  v0.3.5
+  Add metadata timeout by @DecDuck in #287
+  Fix 7z archives with spaces by @DecDuck in #288
+  Steam mature content screenshots by @Hicks-99 in #284
+  Internal server error fixes, 7z fixes, etc by @DecDuck in #289
+  Translations update from Weblate by @DecDuck in #290
 dependencies: []
 path: ""
 defaultUsername: ""
