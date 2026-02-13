@@ -3,8 +3,8 @@ id: kiti-droposs
 name: Droposs
 tagline: An open Steam.
 icon: https://svgur.com/i/mvA.svg
-category: Development
-version: "1.0.0"
+category: Games
+version: "0.3.5"
 port: 3000
 description: >-
 Drop is an open-source, self-hosted alternative to platforms like Steam and Epic.
