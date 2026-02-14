@@ -1,0 +1,32 @@
+manifestVersion: 1
+id: kiti-puter
+name: Puter
+tagline: A web-based desktop environment in your browser.
+icon: https://puter.com/logo.png
+category: Utilities
+version: "1.0.0"
+port: 4100
+description: >-
+  Puter is an open-source web desktop that runs entirely in your browser.
+  It provides a full desktop-like experience with file manager, apps,
+  terminal, and more — all self-hostable on your server.
+developer: HeyPuter
+website: https://puter.com
+submitter: Rfonte
+submission: https://github.com/kiti-sites/umbrel-community-app-store/kiti-puter
+repo: https://github.com/HeyPuter/puter
+support: https://github.com/HeyPuter/puter/issues
+gallery:
+  - https://puter.com/screenshot1.png
+  - https://puter.com/screenshot2.png
+  - https://puter.com/screenshot3.png
+releaseNotes: |-
+  Initial release on Kiti Store 🚀
+  - Self-hosted web desktop
+  - File manager and apps
+  - Multi-user support
+  - Browser-based terminal
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""
