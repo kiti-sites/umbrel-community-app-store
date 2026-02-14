@@ -1,43 +1,24 @@
-version: "3.9"
-
+version: "3.8"
 services:
-  osjs:
-    image: osjs/osjs:v3
-    container_name: osjs
+  puter:
+    container_name: puter
+    image: ghcr.io/heyputer/puter:latest
+    pull_policy: always
+    # build: ./
     restart: unless-stopped
     ports:
-      - "8080:8000"
+      - '4100:4100'
     environment:
-      # modo produção
-      NODE_ENV: production
-
-      # ativa auth por banco
-      OSJS_AUTHENTICATOR: database
-
-      # config do banco
-      OSJS_DB_TYPE: mysql
-      OSJS_DB_HOST: db
-      OSJS_DB_USER: osjs
-      OSJS_DB_PASS: osjspass
-      OSJS_DB_NAME: osjs
-
-      # caminho do filesystem dos usuários
-      OSJS_FS_ROOT: /data
-
+      # TZ: Europe/Paris
+      # CONFIG_PATH: /etc/puter
+      PUID: 1000
+      PGID: 1000
     volumes:
-      - ./data:/data
-
-    depends_on:
-      - db
-
-  db:
-    image: mariadb:10.6
-    container_name: osjs-db
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_DATABASE: osjs
-      MYSQL_USER: osjs
-      MYSQL_PASSWORD: osjspass
-    volumes:
-      - ./db:/var/lib/mysql
+      - ./puter/config:/etc/puter
+      - ./puter/data:/var/puter
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://puter.localhost:4100/test || exit 1
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
