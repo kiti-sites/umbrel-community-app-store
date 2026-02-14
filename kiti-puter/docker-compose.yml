@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 
 services:
   osjs:
@@ -6,6 +6,38 @@ services:
     container_name: osjs
     restart: unless-stopped
     ports:
-      - "8000:8000"
+      - "8080:8000"
     environment:
-      - NODE_ENV=production
+      # modo produção
+      NODE_ENV: production
+
+      # ativa auth por banco
+      OSJS_AUTHENTICATOR: database
+
+      # config do banco
+      OSJS_DB_TYPE: mysql
+      OSJS_DB_HOST: db
+      OSJS_DB_USER: osjs
+      OSJS_DB_PASS: osjspass
+      OSJS_DB_NAME: osjs
+
+      # caminho do filesystem dos usuários
+      OSJS_FS_ROOT: /data
+
+    volumes:
+      - ./data:/data
+
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.6
+    container_name: osjs-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: osjs
+      MYSQL_USER: osjs
+      MYSQL_PASSWORD: osjspass
+    volumes:
+      - ./db:/var/lib/mysql
